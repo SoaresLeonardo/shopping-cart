@@ -1,9 +1,14 @@
+import Header from "./components/header";
+
 export default function App() {
- return(
-  <div>
-    <h1>Olá mundo!</h1>
-  </div>
- )
+  return (
+    <>
+      <div className="container">
+        <Header />
+        <div className="products-container">
+          <div className="product-card"></div>
+        </div>
+      </div>
+    </>
+  );
 }
-
-
