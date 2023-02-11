@@ -1,6 +1,7 @@
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import data from "../../../backend/Data";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const { productItems } = data;
@@ -8,14 +9,14 @@ export default function Home() {
     <>
       <div className="container">
         <div className="header-container">
-          <h2>Shopping cart</h2>
-          <span>
-            Cart <AiOutlineShoppingCart />
-          </span>
+          <h1>Shopping cart</h1>
+          <Link to="/cart">
+            cart <AiOutlineShoppingCart />
+          </Link>
         </div>
         <div className="products-container">
           {productItems.map((productItem) => (
-            <div className="product-card">
+            <div key={productItem.id} className="product-card">
               <div>
                 <img src={productItem.image} alt="Product item" />
               </div>
@@ -27,7 +28,8 @@ export default function Home() {
               </div>
               <div>
                 <button>
-                  Adicionar ao carrinho <AiOutlineShoppingCart size={17} style={{marginLeft: 8}} />
+                  Adicionar ao carrinho{" "}
+                  <AiOutlineShoppingCart size={17} className="cart-icon" />
                 </button>
               </div>
             </div>
