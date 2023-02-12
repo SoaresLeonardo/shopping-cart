@@ -1,11 +1,12 @@
 import { AiOutlineShoppingCart, AiOutlineHome } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import {BiRocket} from 'react-icons/bi'
 import "./Navbar.css";
 export default function Navbar() {
   return (
     <>
       <nav>
-        <div className="nav-name">Shopping cart</div>
+        <div className="nav-name">Shopping cart <BiRocket/></div>
         <div className="nav-links">
           <ul>
             <li>
