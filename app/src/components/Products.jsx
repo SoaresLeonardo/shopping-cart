@@ -1,5 +1,5 @@
 import { AiOutlineShoppingCart } from "react-icons/ai";
-
+import "./Products.css";
 export default function Products({ productItems, addToCart }) {
   return (
     <>
