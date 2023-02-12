@@ -10,11 +10,15 @@ export default function App() {
   const addToCart = (data) => {
     setCart([...cart, data]);
   };
+
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home addToCart={addToCart} productItems={productItems} />} />
+          <Route
+            path="/"
+            element={<Home addToCart={addToCart} productItems={productItems} />}
+          />
           <Route path="/cart" element={<Cart cart={cart} />} />
         </Routes>
       </BrowserRouter>
