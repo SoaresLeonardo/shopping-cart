@@ -1,4 +1,3 @@
-import data from "../../../backend/Data";
 import "./style.css";
 import Navbar from "../../components/Navbar";
 import Products from "../../components/Products";
