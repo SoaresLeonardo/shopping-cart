@@ -3,8 +3,7 @@ import "./style.css";
 import Navbar from "../../components/Navbar";
 import Products from "../../components/Products";
 
-export default function Home({ addToCart }) {
-  const { productItems } = data;
+export default function Home({ addToCart, productItems }) {
   return (
     <>
       <div className="container">
