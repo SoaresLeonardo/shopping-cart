@@ -6,14 +6,14 @@ export default function Products({ productItems, addToCart }) {
       <div className="products-container">
         {productItems.map((productItem) => (
           <div key={productItem.id} className="product-card">
-            <div>
-              <img src={productItem.image} alt="Product item" />
+            <div className="product-image">
+              <img src={productItem.image} alt="Product image" />
             </div>
-            <div>
+            <div className="product-description">
               <span>{productItem.description}</span>
             </div>
-            <div>
-              <span className="price-product">{`R$ ${productItem.price}`}</span>
+            <div className="product-price">
+              <span>{`R$ ${productItem.price}`}</span>
             </div>
             <div>
               <button onClick={() => addToCart(productItem)}>
