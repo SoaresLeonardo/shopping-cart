@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import data from "../backend/Data";
+import data from "./components/backend/Data";
 import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 const { productItems } = data;
