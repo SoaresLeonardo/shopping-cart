@@ -5,7 +5,7 @@ const data = {
       name: "Sapato exemplo",
       description: "Tênis Streetwear Masculino Chunky Futurista",
       price: "240,20",
-      image: "../src/assets/img/tenis1.png",
+      image: "./src/assets/img/tenis1.png",
     },
     {
       id: "2",
