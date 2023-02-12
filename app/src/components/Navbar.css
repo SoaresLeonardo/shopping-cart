@@ -1,0 +1,37 @@
+nav {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: #1d1f27;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: bold;
+}
+
+.nav-name {
+  flex: 1;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.icon {
+  color: white;
+  font-size: 1.4rem;
+}
+
+.icon:hover {
+  cursor: pointer;
+  color: #d4d4d4;
+}
