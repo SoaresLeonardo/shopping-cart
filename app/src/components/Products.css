@@ -37,7 +37,7 @@
 }
 
 .product-card button {
-  background-color: #a513ff;
+  background-color: #6121f7;
   width: 80%;
   position: absolute;
   color: white;
@@ -52,7 +52,7 @@
 }
 
 .product-card button:hover {
-  background-color: #b53efe;
+  background-color: #4f15d4;
 }
 
 .product-price {
