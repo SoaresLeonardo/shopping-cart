@@ -7,7 +7,7 @@ export default function Cart({ cart }) {
   return (
     <>
       <div className="container">
-        <Navbar />
+        <Navbar cart={cart} />
         <div className="my-cart">
           <h2>Meu carrinho</h2>
           <span>{`Atualmente ${cart.length} item no carrinho`}</span>

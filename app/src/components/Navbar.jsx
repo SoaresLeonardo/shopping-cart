@@ -17,7 +17,11 @@ export default function Navbar({ cart }) {
               <Link to="/cart">
                 <AiOutlineShoppingCart className="icon" />
               </Link>
-              {cart.length}
+              {cart.length > 0 ? (
+                <span className="cartItems-counter">{cart.length}</span>
+              ) : (
+                ""
+              )}
             </li>
           </ul>
         </div>
