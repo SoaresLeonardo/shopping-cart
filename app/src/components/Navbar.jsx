@@ -2,7 +2,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { BiRocket } from "react-icons/bi";
 import "./Navbar.css";
-export default function Navbar() {
+export default function Navbar({ cart }) {
   return (
     <>
       <nav>
@@ -17,6 +17,7 @@ export default function Navbar() {
               <Link to="/cart">
                 <AiOutlineShoppingCart className="icon" />
               </Link>
+              {cart.length}
             </li>
           </ul>
         </div>
