@@ -17,7 +17,13 @@ export default function App() {
         <Routes>
           <Route
             path="/"
-            element={<Home addToCart={addToCart} productItems={productItems} cart={cart} />}
+            element={
+              <Home
+                addToCart={addToCart}
+                productItems={productItems}
+                cart={cart}
+              />
+            }
           />
           <Route path="/cart" element={<Cart cart={cart} />} />
         </Routes>
