@@ -1,43 +1,56 @@
 import Navbar from "../../components/Navbar";
 import "./styles.css";
 import { IoMdRemove, IoMdAdd } from "react-icons/io";
-import { AiFillDelete } from "react-icons/ai";
+import { FaCartPlus } from "react-icons/fa";
 
 export default function Cart({ cart }) {
+  const priceTotal = cart.reduce((price, item) => price + item.price, 0);
+
   return (
     <>
       <div className="container">
         <Navbar cart={cart} />
-        <div className="my-cart">
-          <h2>Meu carrinho</h2>
-          <span>{`Atualmente ${cart.length} item no carrinho`}</span>
+        <div className="cartItems-title">
+          <h1>Meu carrinho</h1>
         </div>
-        <div className="cartItems-container">
-          {cart.map((item) => (
-            <div className="cartItem">
-              <div className="cartItem-image">
-                <img src={item.image} alt="Product image" />
+        {cart.length > 1 ? (
+          <div className="cartItems">
+            {cart.map((item) => (
+              <div className="cartItem-container">
+                <div className="cartItem-image">
+                  <img
+                    src={item.image}
+                    alt="Imagem do produto dentro do carrinho"
+                  />
+                  <div className="cartItem-functions">
+                    <button>
+                      <IoMdAdd />
+                    </button>
+                    <span className="cartItem-quanty">1</span>
+                    <button>
+                      <IoMdRemove />
+                    </button>
+                  </div>
+                </div>
+                <div className="cartItem-description">
+                  <span>{item.description}</span>
+                </div>
+                <div className="cartItem-price">{`R$ ${item.price}`}</div>
               </div>
-              <div className="cartItem-description">
-                <span>{item.description}</span>
-              </div>
-              <div className="cartItem-function">
-                <button className="cartItem-remove">
-                  <IoMdRemove className="cartItem-remove-btn" />
-                </button>
-                <button className="cartItem-add">
-                  <IoMdAdd className="cartItem-add-btn" />
-                </button>
-              </div>
-              <div className="cartItem-price">
-                <span>{`R$ ${item.price}`}</span>
-              </div>
-              <div className="cartItem-delete">
-                <AiFillDelete />
-              </div>
+            ))}
+            <div className="finalize">
+              <button className="payment">Comprar</button>
+              <span className="total">
+                Total: {`R$: ${priceTotal.toFixed(2)}`}
+              </span>
             </div>
-          ))}
-        </div>
+          </div>
+        ) : (
+          <div className="cartItem-empty">
+            <FaCartPlus className="cartItem-empty-icon"/>
+            <span>Carrinho vazio.</span>
+          </div>
+        )}
       </div>
     </>
   );
