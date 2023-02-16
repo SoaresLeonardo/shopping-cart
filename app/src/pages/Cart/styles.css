@@ -1,57 +1,120 @@
-.my-cart {
+.cartItems-title {
   padding: 20px;
   text-align: center;
+  margin-top: 30px;
 }
 
-.cartItems-container {
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.cartItem {
-  padding: 30px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.144);
-  display: flex;
-  align-items: center;
+.cartItems {
+  margin: auto;
+  width: 80%;
+  padding: 20px;
   border-radius: 3px;
-  width: auto;
+  border: 1px solid #cfcfcfb4;
+}
+
+.cartItem-container {
+  display: flex;
+  padding: 20px;
+  align-items: flex-start;
+  border-radius: 3px;
+  border-bottom: 1px solid #cfcfcfb4;
+  position: relative;
 }
 
 .cartItem-image {
-  margin: 0 10px;
+  margin-right: 20px;
+  padding: 10px;
 }
 
 .cartItem-image img {
-  width: 60px;
-  float: left;
+  width: 100px;
 }
 
 .cartItem-price {
   font-weight: bold;
+  position: absolute;
+  top: 10px;
+  left: 80%;
+  color: #ff2e2e;
 }
 
+.cartItem-description {
+  padding-top: 20px;
+}
 
-.cartItem-function {
-  display: flex;
+.cartItem-functions {
+  position: absolute;
+  left: 160px;
+  bottom: 20px;
+  border: 1px solid #cfcfcfb4;
   padding: 10px;
+  border-radius: 3px;
 }
 
-.cartItem-function button {
-  background: none;
+.cartItem-functions button {
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color: inherit;
+}
+
+.cartItem-quanty {
+  font-size: 0.8rem;
+  color: #ff2e2e;
+}
+
+.finalize {
   display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
   align-items: center;
 }
 
-.cartItem-add-btn,
-.cartItem-remove-btn {
-  margin-right: 10px;
+.payment {
+  background-color: #1d1c22;
+  padding: 13px;
+  color: white;
+  border-radius: 3px;
+  width: 130px;
   cursor: pointer;
 }
 
-.cartItem-delete {
-    padding: 10px;
-    cursor: pointer;
+.cartItem-empty {
+  font-size: 2em;
+  display: flex;
+  margin: 30px auto;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #cfcfcfb4;
+  width: 50%;
+  padding: 30px;
+  border-radius: 3px;
+}
+
+.cartItem-empty-icon {
+  margin-right: 10px;
+}
+
+@media (max-width: 476px) {
+  .cartItem-description {
+    font-size: 0.8rem;
+    padding-bottom: 50px;
+  }
+
+  .cartItem-image img {
+    width: 70px;
+  }
+
+  .cartItem-functions {
+    padding: 3px;
+    left: 130px;
+  }
+
+  .cartItem-price {
+    font-size: 0.7rem;
+    left: 70%;
+  }
+
+  .cartItem-empty {
+    font-size: 1rem;
+  }
 }
