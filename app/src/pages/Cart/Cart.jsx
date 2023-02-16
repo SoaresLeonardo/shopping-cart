@@ -13,7 +13,7 @@ export default function Cart({ cart }) {
         <div className="cartItems-title">
           <h1>Meu carrinho</h1>
         </div>
-        {cart.length > 1 ? (
+        {cart.length > 0 ? (
           <div className="cartItems">
             {cart.map((item) => (
               <div className="cartItem-container">
