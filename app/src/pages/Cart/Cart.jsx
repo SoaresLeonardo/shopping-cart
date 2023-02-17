@@ -4,7 +4,7 @@ import { IoMdRemove, IoMdAdd } from "react-icons/io";
 import { FaCartPlus } from "react-icons/fa";
 
 export default function Cart({ cart }) {
-  const priceTotal = cart.reduce((price, item) => price + item.price, 0);
+  const priceTotal = cart.reduce((price, item) => price + item.quantity * item.price, 0);
 
   return (
     <>
@@ -26,7 +26,7 @@ export default function Cart({ cart }) {
                     <button>
                       <IoMdRemove />
                     </button>
-                    <span className="cartItem-quanty">1</span>
+                    <span className="cartItem-quanty">{item.quantity}</span>
                     <button>
                       <IoMdAdd />
                     </button>
