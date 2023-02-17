@@ -6,11 +6,11 @@
 }
 
 :root {
-  --borderColor: #cfcfcfb4;
+  --borderColor: #cfcfcfde;
   --buttonColor: #1d1c22;
   --buttonHoverColor: #171a1fd2;
   --colorWhite: #ffffff;
-  --backgroundImageCardColor: #e0e0e048;
+  --backgroundImageCardColor: #e0e0e063;
   --borderRadius: 3px;
 }
 
@@ -97,7 +97,7 @@
   color: inherit;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 450px) {
   .product-card {
     width: 60%;
   }
