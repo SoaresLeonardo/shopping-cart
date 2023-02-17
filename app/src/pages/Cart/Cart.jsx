@@ -24,11 +24,11 @@ export default function Cart({ cart }) {
                   />
                   <div className="cartItem-functions">
                     <button>
-                      <IoMdAdd />
+                      <IoMdRemove />
                     </button>
                     <span className="cartItem-quanty">1</span>
                     <button>
-                      <IoMdRemove />
+                      <IoMdAdd />
                     </button>
                   </div>
                 </div>
@@ -47,7 +47,7 @@ export default function Cart({ cart }) {
           </div>
         ) : (
           <div className="cartItem-empty">
-            <FaCartPlus className="cartItem-empty-icon"/>
+            <FaCartPlus className="cartItem-empty-icon" />
             <span>Carrinho vazio.</span>
           </div>
         )}
