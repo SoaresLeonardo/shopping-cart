@@ -3,11 +3,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import data from "./components/backend/Data";
 import Cart from "./pages/Cart/Cart";
 import Home from "./pages/Home";
+import NotFound from "./pages/NotFound/NotFound";
 const { productItems } = data;
 
 export default function App() {
   const [cart, setCart] = useState([]);
-  
+
   const addToCart = (data) => {
     const ProductExist = cart.find((item) => item.id === data.id);
     if (ProductExist) {
@@ -39,6 +40,7 @@ export default function App() {
             }
           />
           <Route path="/cart" element={<Cart cart={cart} />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </>
