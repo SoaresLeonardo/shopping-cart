@@ -1,12 +1,19 @@
+:root {
+  --backgroundNavColor: #1d1f27;
+  --colorWhite: #ffffff;
+  --backgroundColorCartItemsCounter: red;
+  --colorLinksHover: #d0d2d8ce;
+}
+
 nav {
-  color: white;
+  color: var(--colorWhite);
   display: flex;
   align-items: center;
   justify-content: center;
   height: 50px;
   padding: 13px;
   padding-left: 30px;
-  background-color: #1d1f27;
+  background-color: var(--backgroundNavColor);
   font-weight: bold;
 }
 
@@ -20,11 +27,11 @@ nav {
 
 .cartItems-counter {
   display: block;
-  background-color: red;
+  background-color: var(--backgroundColorCartItemsCounter);
   border-radius: 100%;
   width: 20px;
   height: 20px;
-  color: white;
+  color: var(--colorWhite);
   font-weight: bolder;
   text-align: center;
   font-size: 0.9em;
@@ -46,20 +53,22 @@ nav {
 }
 
 .icon {
-  color: white;
+  color: var(--colorWhite);
   font-size: 1.5rem;
+  transition: 0.2s;
 }
 
 .home-link {
   color: inherit;
   text-decoration: none;
+  transition: 0.2s;
 }
 
 .home-link:hover {
-  color: #727272;
+  color: var(--colorLinksHover);
 }
 
 .icon:hover {
   cursor: pointer;
-  color: #727272;
+  color: var(--colorLinksHover);
 }
