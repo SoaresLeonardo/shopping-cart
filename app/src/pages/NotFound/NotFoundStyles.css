@@ -1,0 +1,33 @@
+.notFound {
+  margin: 60px auto;
+  text-align: center;
+  width: 80%;
+}
+
+.notFound-image {
+  margin-top: 30px;
+}
+
+.notFound-image img {
+  width: 50%;
+}
+
+.sociais {
+  font-size: 2rem;
+  margin-top: 60px;
+}
+
+.sociais a {
+  color: black;
+  margin-right: 10px;
+}
+
+.sociais a:hover {
+  color: rgb(37, 37, 37);
+}
+
+@media (max-width: 600px) {
+  .notFound-image img {
+    width: 80%;
+  }
+}
