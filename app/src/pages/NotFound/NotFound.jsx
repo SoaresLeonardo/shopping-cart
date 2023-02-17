@@ -6,13 +6,10 @@ export default function NotFound() {
     <div>
       <div className="notFound">
         <h1>Ops... ocorreu erro</h1>
-        <span>Voltar para <a href="/">home</a></span>
-        <div className="notFound-image">
-          <img
-            src="../../../public/img/notFoundImage.png"
-            alt="Imagem de erro"
-          />
-        </div>
+        <span>
+          Voltar para <a href="/">home</a>
+        </span>
+        <div className="notFound-error">( ˘︹˘ )</div>
         <div className="sociais">
           <a href="">
             <AiFillGithub />
