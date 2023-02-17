@@ -7,8 +7,21 @@ const { productItems } = data;
 
 export default function App() {
   const [cart, setCart] = useState([]);
+  
   const addToCart = (data) => {
-    setCart([...cart, data]);
+    const ProductExist = cart.find((item) => item.id === data.id);
+    if (ProductExist) {
+      setCart(
+        cart.map((item) =>
+          item.id === data.id
+            ? { ...ProductExist, quantity: ProductExist.quantity + 1 }
+            : item
+        )
+      );
+      // console.log(ProductExist);
+    } else {
+      setCart([...cart, { ...data, quantity: 1 }]);
+    }
   };
 
   return (
