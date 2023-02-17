@@ -6,7 +6,7 @@ export default function Home({ addToCart, productItems, cart }) {
   return (
     <>
       <div className="container">
-        <Navbar cart={cart}/>
+        <Navbar cart={cart} />
         <div className="products-container">
           {productItems.map((productItem) => (
             <div key={productItem.id} className="product-card">
@@ -21,7 +21,7 @@ export default function Home({ addToCart, productItems, cart }) {
               </div>
               <div>
                 <button onClick={() => addToCart(productItem)}>
-                  Adicionar ao carrinho{" "}
+                  Adicionar ao carrinho
                   <AiOutlineShoppingCart size={17} className="cart-icon" />
                 </button>
               </div>
