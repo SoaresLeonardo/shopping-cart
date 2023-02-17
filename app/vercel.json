@@ -1,7 +1,16 @@
 {
-    "routes": [
-      { "src": "/", "dest": "/" },
-      { "src": "/cart", "dest": "/" },
-      {"source": "/(.*)", "destination": "/"}
-    ]
-  }
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/"
+    },
+    {
+      "src": "/cart",
+      "dest": "/"
+    },
+    {
+      "src": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}
