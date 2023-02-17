@@ -4,17 +4,15 @@
   width: 80%;
 }
 
-.notFound-image {
-  margin-top: 30px;
+.notFound-error {
+  margin-top: 50px;
+  font-size: 5rem;
 }
 
-.notFound-image img {
-  width: 50%;
-}
 
 .sociais {
   font-size: 2rem;
-  margin-top: 60px;
+  margin-top: 40vh;
 }
 
 .sociais a {
