@@ -3,7 +3,7 @@ import { FaCartPlus } from "react-icons/fa";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import "./styles.css";
 
-export default function Cart({ cart, addToCart }) {
+export default function Cart({ cart, addToCart, removeToCart }) {
   const price = cart.reduce(
     (price, item) => price + item.quantity * item.price,
     0
@@ -25,7 +25,7 @@ export default function Cart({ cart, addToCart }) {
               <span>{item.description}</span>
             </div>
             <div className="cartItem-functions">
-              <button>
+              <button onClick={() => removeToCart(item)}>
                 <AiOutlineLeft />
               </button>
               <span>{item.quantity}</span>

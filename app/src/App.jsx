@@ -25,6 +25,21 @@ export default function App() {
     }
   };
 
+  const removeToCart = (data) => {
+    const ProductExist = cart.find((item) => item.id === data.id);
+    if (ProductExist.quantity === 1) {
+      setCart(cart.filter((item) => item.id !== data.id));
+    } else {
+      setCart(
+        cart.map((item) =>
+          item.id === data.id
+            ? { ...ProductExist, quantity: ProductExist.quantity - 1 }
+            : item
+        )
+      );
+    }
+  };
+
   return (
     <>
       <BrowserRouter>
@@ -39,7 +54,16 @@ export default function App() {
               />
             }
           />
-          <Route path="/cart" element={<Cart cart={cart} addToCart={addToCart} />} />
+          <Route
+            path="/cart"
+            element={
+              <Cart
+                cart={cart}
+                addToCart={addToCart}
+                removeToCart={removeToCart}
+              />
+            }
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
