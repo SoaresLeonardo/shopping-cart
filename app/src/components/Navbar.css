@@ -1,7 +1,7 @@
 :root {
   --backgroundNavColor: #1d1f27;
   --colorWhite: #ffffff;
-  --backgroundColorCartItemsCounter: red;
+  --backgroundColorCartItemsCounter: rgba(255, 255, 255, 0);
   --colorLinksHover: #d0d2d8ce;
 }
 
@@ -22,7 +22,7 @@ nav {
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  font-size: clamp(1em, 1em + 1vw, 1.5em);
+
 }
 
 .cartItems-counter {
@@ -31,14 +31,14 @@ nav {
   border-radius: 100%;
   width: 20px;
   height: 20px;
-  color: var(--colorWhite);
+  color: rgb(255, 166, 0);
   font-weight: bolder;
   text-align: center;
-  font-size: 0.9em;
+  font-size: 0.8em;
   float: right;
   position: relative;
-  top: -11px;
-  right: 10px;
+  top: -13px;
+  right: 20px;
 }
 
 .nav-links ul {
@@ -54,7 +54,7 @@ nav {
 
 .icon {
   color: var(--colorWhite);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   transition: 0.2s;
 }
 
