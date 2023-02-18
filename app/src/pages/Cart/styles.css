@@ -2,6 +2,7 @@
   --borderColor: #cfcfcfb4;
   --colorCartItemPrice: #ff2e2e;
   --backgroundButtonColor: #1d221c;
+  --backgroundImageCartItemColor: #e0e0e063;
   --colorWhite: #ffffff;
   --borderRadius: 3px;
 }
@@ -14,7 +15,7 @@
 
 .cartItems {
   margin: 30px auto;
-  width: 80%;
+  width: 60%;
   padding: 20px;
   border-radius: var(--borderRadius);
   border: 1px solid var(--borderColor);
@@ -23,15 +24,17 @@
 .cartItem-container {
   display: flex;
   padding: 20px;
-  align-items: flex-start;
+  align-items: center;
   border-radius: var(--borderRadius);
   border-bottom: 1px solid var(--borderColor);
   position: relative;
 }
 
 .cartItem-image {
-  margin-right: 20px;
+  margin-right: 10px;
   padding: 10px;
+  background-color: var(--backgroundImageCartItemColor);
+  border-radius: var(--borderRadius);
 }
 
 .cartItem-image img {
@@ -41,33 +44,30 @@
 .cartItem-price {
   font-weight: bold;
   position: absolute;
-  top: 10px;
   left: 90%;
-  color: var(--colorCartItemPrice);
-}
-
-.cartItem-description {
-  padding-top: 20px;
 }
 
 .cartItem-functions {
-  position: absolute;
-  left: 160px;
-  bottom: 20px;
   border: 1px solid var(--borderColor);
-  padding: 10px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
   border-radius: var(--borderRadius);
+  position: absolute;
+  left: 70%;
 }
 
 .cartItem-functions button {
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
   background-color: inherit;
+  color: #646464;
+  cursor: pointer;
 }
 
 .cartItem-quanty {
   font-size: 0.8rem;
-  color: var(--colorCartItemPrice);
+  font-weight: bold;
 }
 
 .finalize {
@@ -106,28 +106,29 @@
   margin-right: 10px;
 }
 
+@media (max-width: 1024px) {
+  .cartItems {
+    width: 80%;
+  }
 
-@media (max-width: 476px) {
   .cartItem-description {
     font-size: 0.8rem;
-    padding-bottom: 50px;
-  }
-
-  .cartItem-image img {
-    width: 70px;
-  }
-
-  .cartItem-functions {
-    padding: 3px;
-    left: 130px;
   }
 
   .cartItem-price {
     font-size: 0.7rem;
-    left: 70%;
+    top: 10px;
+    bottom: 0;
+    left: 80%;
   }
 
-  .cartItem-empty {
-    font-size: 1rem;
+  .cartItem-functions {
+    bottom: 10px;
+    padding: 4px;
+    left: 80%;
+  }
+
+  .cartItem-image img {
+    width: 50px;
   }
 }
