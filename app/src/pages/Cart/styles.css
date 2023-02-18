@@ -45,11 +45,11 @@
 }
 
 .cartItem-description span {
-  font-size: 0.9rem;
+  font-size: 0.8rem
 }
 
 .cartItem-description h4 {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .cartItem-functions {
