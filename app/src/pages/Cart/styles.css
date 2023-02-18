@@ -131,4 +131,8 @@
   .cartItem-image img {
     width: 50px;
   }
+
+  .total {
+    font-size: 1rem;
+  }
 }
