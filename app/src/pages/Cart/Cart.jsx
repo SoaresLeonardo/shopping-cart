@@ -16,7 +16,7 @@ export default function Cart({ cart, addToCart }) {
       <Navbar cart={cart} />
       <div className="cartItems-container">
         {cart.map((item) => (
-          <div className="cartItems">
+          <div key={item.id} className="cartItems">
             <div className="cartItem-image">
               <img src={item.image} alt="Imagem do Produto" />
             </div>
