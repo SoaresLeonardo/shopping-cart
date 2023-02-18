@@ -1,7 +1,6 @@
 :root {
   --backgroundNavColor: #1d1f27;
   --colorWhite: #ffffff;
-  --backgroundColorCartItemsCounter: rgba(255, 255, 255, 0);
   --colorLinksHover: #d0d2d8ce;
 }
 
@@ -27,11 +26,10 @@ nav {
 
 .cartItems-counter {
   display: block;
-  background-color: var(--backgroundColorCartItemsCounter);
   border-radius: 100%;
   width: 20px;
   height: 20px;
-  color: rgb(255, 166, 0);
+  color: #ffa600;
   font-weight: bolder;
   text-align: center;
   font-size: 0.8em;
