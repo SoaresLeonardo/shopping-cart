@@ -39,7 +39,7 @@ export default function App() {
               />
             }
           />
-          <Route path="/cart" element={<Cart cart={cart} />} />
+          <Route path="/cart" element={<Cart cart={cart} addToCart={addToCart} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
