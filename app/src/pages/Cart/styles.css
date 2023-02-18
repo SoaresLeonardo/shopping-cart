@@ -44,8 +44,12 @@
   margin-bottom: 10px;
 }
 
+.cartItem-description span {
+  font-size: 0.9rem;
+}
+
 .cartItem-description h4 {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .cartItem-functions {
