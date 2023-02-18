@@ -1,5 +1,5 @@
 :root {
-  --borderColor: #cfcfcfb4;
+  --borderCartItemColor: #eaeaec;
   --colorCartItemPrice: #ff2e2e;
   --backgroundButtonColor: #1d221c;
   --backgroundImageCartItemColor: #e0e0e063;
@@ -7,132 +7,144 @@
   --borderRadius: 3px;
 }
 
-.cartItems-title {
-  padding: 20px;
-  text-align: center;
-  margin-top: 30px;
+.cartItems-container {
+  margin-top: 60px;
+  margin-left: 50px;
+  width: 55%;
+  display: inline-block;
 }
 
 .cartItems {
-  margin: 30px auto;
-  width: 60%;
-  padding: 20px;
-  border-radius: var(--borderRadius);
-  border: 1px solid var(--borderColor);
-}
-
-.cartItem-container {
   display: flex;
+  border-top: 1px solid var(--borderCartItemColor);
   padding: 20px;
-  align-items: center;
-  border-radius: var(--borderRadius);
-  border-bottom: 1px solid var(--borderColor);
   position: relative;
 }
 
 .cartItem-image {
-  margin-right: 10px;
-  padding: 10px;
   background-color: var(--backgroundImageCartItemColor);
   border-radius: var(--borderRadius);
+  margin-right: 15px;
+  padding: 10px;
 }
 
 .cartItem-image img {
-  width: 100px;
+  width: 130px;
 }
 
 .cartItem-price {
   font-weight: bold;
   position: absolute;
-  left: 90%;
+  left: 190px;
+  bottom: 20%;
+}
+
+.cartItem-description {
+  color: rgb(70, 70, 70);
+  margin-bottom: 10px;
+}
+
+.cartItem-description h4 {
+  margin-bottom: 10px;
 }
 
 .cartItem-functions {
-  border: 1px solid var(--borderColor);
-  padding: 8px;
-  display: flex;
-  align-items: center;
-  border-radius: var(--borderRadius);
   position: absolute;
-  left: 70%;
+  left: 90%;
+  display: flex;
+  padding: 5px;
+  border: 2px solid var(--borderCartItemColor);
+  background-color: var(--colorWhite);
 }
 
 .cartItem-functions button {
-  margin-right: 5px;
-  margin-left: 5px;
   background-color: inherit;
-  color: #646464;
+  margin-left: 5px;
+  margin-right: 5px;
   cursor: pointer;
-}
-
-.cartItem-quanty {
-  font-size: 0.8rem;
-  font-weight: bold;
-}
-
-.finalize {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-  align-items: center;
 }
 
 .payment {
-  background-color: var(--backgroundButtonColor);
-  padding: 13px;
-  color: var(--colorWhite);
-  border-radius: var(--borderRadius);
-  width: 130px;
-  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  top: 130px;
+  bottom: 0;
+  padding: 25px;
+  width: 30%;
+  height: 50%;
+  background-color: #f9fafc;
+  margin-left: 50px;
 }
 
-.total {
-  font-size: 1.3rem;
-}
-
-.cartItem-empty {
-  font-size: 2em;
+.payment-item {
+  border-bottom: 1px solid var(--borderCartItemColor);
+  padding: 25px;
   display: flex;
-  margin: 30px auto;
+  justify-content: space-between;
+}
+
+.payment-button {
+  margin-top: 30px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--borderColor);
-  width: 50%;
-  padding: 30px;
+}
+
+.payment-button button {
+  background-color: #5046e5;
+  width: 90%;
+  color: var(--colorWhite);
+  padding: 13px;
+  font-size: 1.2rem;
   border-radius: var(--borderRadius);
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.cartItem-empty-icon {
-  margin-right: 10px;
+.payment-button button:hover {
+  background-color: #6157f0;
 }
 
-@media (max-width: 1024px) {
-  .cartItems {
+.emptyCart {
+  margin: 50px auto;
+  width: 40%;
+  padding: 20px;
+  text-align: center;
+  font-size: 2rem;
+  border: 1px solid var(--borderCartItemColor);
+}
+
+@media (max-width: 986px) {
+  .payment {
+    display: block;
+    position: inherit;
     width: 80%;
+    margin: 20px auto;
   }
 
-  .cartItem-description {
-    font-size: 0.8rem;
+  .cartItems-container {
+    width: 90%;
+    margin: 30px auto;
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .cartItems {
+    padding-bottom: 80px;
   }
 
   .cartItem-price {
-    font-size: 0.7rem;
-    top: 10px;
-    bottom: 0;
-    left: 80%;
+    left: 125px;
+    margin-bottom: 20px;
   }
 
   .cartItem-functions {
+    left: 125px;
     bottom: 10px;
-    padding: 4px;
-    left: 80%;
   }
 
   .cartItem-image img {
-    width: 50px;
-  }
-
-  .total {
-    font-size: 1rem;
+    width: 70px;
   }
 }
