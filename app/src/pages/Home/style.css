@@ -43,6 +43,10 @@
   background-color: var(--backgroundImageCardColor);
   padding: 10px;
   margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  overflow: scroll;
+  justify-content: center;
   border-radius: var(--borderRadius);
 }
 
@@ -97,8 +101,12 @@
   color: inherit;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
+  .product-image img {
+    width: 200px;
+  }
+
   .product-card {
-    width: 60%;
+    width: 65%;
   }
 }
