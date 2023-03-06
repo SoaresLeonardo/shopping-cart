@@ -21,6 +21,10 @@
   position: relative;
 }
 
+.cartItems:first-child {
+  border-top: none;
+}
+
 .cartItem-image {
   background-color: var(--backgroundImageCartItemColor);
   border-radius: var(--borderRadius);
@@ -45,7 +49,7 @@
 }
 
 .cartItem-description span {
-  font-size: 0.8rem
+  font-size: 0.8rem;
 }
 
 .cartItem-description h4 {
